@@ -7,8 +7,8 @@
 
 ## Stages
 
-- [x] Visão do projeto, Figma, VS Code. 
-- [x] HTML e CSS.
-- [x] JavaScript e DOM.
-- [x] GitHub Pages, API e JSON.
-- [x] Mobile e ajustes extras
+1. Visão do projeto, Figma, VS Code. 
+2. HTML e CSS.
+3. JavaScript e DOM.
+4. GitHub Pages, API e JSON.
+5. Mobile e ajustes extras

@@ -2,6 +2,14 @@
   margin: 0;    
 }
 
+@media (min-width: 720px) {
+	/* estilos versão tablet */
+}
+
+@media (min-width: 960px) {
+	/* estilos versão desktop */
+}
+
 html,
 body {
   --black: hsl(240, 6%, 13%);
@@ -18,9 +26,10 @@ body {
 }
 
 main {
-  background: url(images/background.svg) ; /*função link com a imagem*/
-  width: 375px;
-  height: 812px;
+  background: url(images/background.svg) no-repeat center/cover;    /*Não repete a imagem, centraliza e cobre os espaços em branco*/
+  width: 100vw;    /*view port width -> width do dispositivo*/
+  min-height: 812px;
+  height: 100vh;   /*view port height -> height do dispositivo*/
 }
 
 .container {

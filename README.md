@@ -2,7 +2,7 @@
 
 - ✨ Crachá digital desenvolvido na trilha **Origin** da **Rocketseat** 🚀
 - 🌠 Tecnologias utilizadas: **HTML**, **CSS**, **JavaScript**, **API**, **JSON** 👨🏻‍🚀
-- 👉 [Projeto](https://rogeriofrsouza.github.io/nlw-heat/)
+- 👉 [Projeto](https://rogeriofrsouza.github.io/nlw-heat/) 👈
 
 
 ## Stages

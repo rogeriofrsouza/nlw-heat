@@ -1,0 +1,88 @@
+* {            /*Seletor universal*/
+  margin: 0;    
+}
+
+html,
+body {
+  --black: hsl(240, 6%, 13%);   /*variável no CSS*/
+  --gray: hsl(240, 9%, 89%);    /*h = cor, s = saturação, l = luz da cor*/
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;     /*sem-serif = sem alguns contornos da fonte*/
+  -webkit-font-smoothing: antialiased;   /*Texto com uma leitura mais suave*/
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background: url(images/background.svg);    /*função link com a imagem de fundo*/
+  width: 375px;
+  height: 812px;
+}
+
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto; /*Mantém o conteúdo equilibrado!*/
+  text-align: center;
+
+  color: var(--gray);
+}
+
+.avatar {
+  width: 10rem;   /*rem tem uma relação com o pixel padrão da página. A fonte padrão é 16 pixels.*/
+  margin: 11.5rem auto 0;   /*top, right+left, bottom*/
+  position: relative;   /*ele é o limite para o absolute*/
+}
+
+.avatar span {
+  position: absolute;  /*Cria-se níveis de empilhamento*/
+  top: -15px;
+  z-index: 1;
+}
+
+.avatar > img {    /*Pega a imagem no primeiro nivel do avatar*/
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+
+  clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);    /*clippy CSS*/
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--gray);
+  text-decoration: none;
+
+  margin-top: 0.25rem;
+
+  display: flex;
+  gap: 0.75rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+
+  list-style: none;   /*Retira os pontos dos itens da lista*/
+  padding: 0; 
+
+  display: flex;   /*Deixa os elementos lado a lado no eixo x (main)*/
+  /*flex-direction: column;*/
+  gap: 0.5rem;
+
+  justify-content: center;   /*Necessário por conta do uso do flex*/
+}

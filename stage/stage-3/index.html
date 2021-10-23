@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rogério Ferreira - DoWhile 2021</title>
+    <link rel="stylesheet" href="style.css" />  <!--relation e referência. Não precisa de https, pois está no diretório do index-->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">  <!--Google fonts API-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="avatar">
+          <span>
+            <img src="images/selo.svg" alt="Selo Rocketseat" />
+          </span>
+          <img src="images/rogerio.png" alt="Foto pessoal" />
+        </div>
+
+        <h1 id="userName"></h1>
+        <a href="" target="_blank">
+          <img src="images/github.svg" alt="ícone GitHub" />
+          
+        </a>
+
+        <p></p>
+
+        <ul id="socialLinks">     <!--Lista não ordenada-->
+          <li class="youtube">             <!--Elementos da lista-->
+            <a href="" target="_blank">
+              <img src="images/youtube.svg" alt="ícone Youtube" />     <!--O alvo é uma nova aba-->
+            </a>
+          </li>
+          <li class="facebook">
+            <a href="" target="_blank">
+              <img src="images/facebook.svg" alt="ícone Facebook"/>
+            </a>
+          </li>
+          <li class="instagram">
+            <a href="" target="_blank">
+              <img src="images/instagram.svg" alt="ícone Instagram" />
+            </a>
+          </li>
+          <li class="twitter">
+            <a href="" target="_blank">
+              <img src="images/twitter.svg" alt="ícone Twitter"/>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    
+    <script>
+      //Links Social Media
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {    //let i vai iterar pelos filhos da ul
+          const social = li.getAttribute('class')    //A const é excluída e recriada após cada iteração do for
+
+          li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+        }
+      }
+
+      //Object user
+      const linksSocialMedia = {
+        github: 'rogeriofrsouza',
+        youtube: 'channel/UC431N4ALlFhjgfk-u8nBBdg',
+        facebook: 'rogeriofrsouza',
+        instagram: 'rogeriofrsouza',
+        twitter: 'rogeriofrsouza'
+      } 
+      
+      userName.textContent = 'Rogério Ferreira'   //Pega o id de um elemento HTML pelo DOM
+      changeSocialMediaLinks()
+      
+    </script>
+  </body>
+</html>

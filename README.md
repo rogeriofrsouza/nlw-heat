@@ -1,4 +1,4 @@
-# Next Week Level - Heat
+# Next Level Week - Heat
 
 - ✨ Crachá digital desenvolvido na trilha **Origin** da **Rocketseat** 🚀
 - 🌠 Tecnologias utilizadas: **HTML**, **CSS**, **JavaScript**, **API**, **JSON** 👨🏻‍🚀

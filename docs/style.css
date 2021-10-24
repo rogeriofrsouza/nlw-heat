@@ -161,3 +161,42 @@ ul {
 }
 
 /* Animations */
+
+@keyframes loading {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.social-btn {
+  position: relative;
+  border-radius: 0.25rem;
+  width: 50px;
+  top: 0;
+  transition: all ease 0.3s;
+}
+.social-btn:hover {
+  border-radius: 50%;
+  top: -8px;
+}
+
+/* Social buttons shadow */
+
+.gmail-img:hover {
+  box-shadow: 0rem 5px 15px rgba(148, 89, 187, 0.5);
+}
+
+.linkedin-img:hover {
+  box-shadow: 0rem 5px 15px rgba(148, 89, 187, 0.5);
+}
+
+.instagram-img:hover {
+  box-shadow: 0rem 5px 15px rgba(148, 89, 187, 0.5);
+}
+
+.facebook-img:hover {
+  box-shadow: 0rem 5px 15px rgba(148, 89, 187, 0.5);
+}

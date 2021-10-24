@@ -3,7 +3,11 @@ function changeSocialMediaLinks() {
   for (let li of socialLinks.children) {
     const social = li.getAttribute('class')
 
+    if (social == 'gmail') {
+      li.children[0].href = `mailto:${linksSocialMedia[social]}@${social}.com`
+    } else {
     li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+    }
   }
 }
 
@@ -25,10 +29,10 @@ function getGithubProfileInfos() {
 // Main
 const linksSocialMedia = {
   github: 'rogeriofrsouza',
-  youtube: 'channel/UC431N4ALlFhjgfk-u8nBBdg',
+  linkedin: 'in/rogério-ferreira-de-souza-556a13127/',
   facebook: 'rogeriofrsouza',
   instagram: 'rogeriofrsouza',
-  twitter: 'rogeriofrsouza'
+  gmail: 'rogeriofrsouza'
 }
 
 changeSocialMediaLinks()

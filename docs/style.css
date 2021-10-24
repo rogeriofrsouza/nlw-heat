@@ -4,6 +4,7 @@
 
 @media (min-width: 720px) {
 	/* estilos versão tablet */
+  
 }
 
 @media (min-width: 960px) {
@@ -51,6 +52,19 @@ main {
   position: absolute;   /*Cria-se níveis de empilhamento*/
   top: -15px;
   z-index: 1;
+}
+
+@keyframes loading {      /*Efeito rotação selo Rocketseat*/
+  0% {
+      transform: rotate(0);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.spinning {
+  animation: loading 10s linear infinite;
 }
 
 .avatar > img {    /*Pega a imagem no primeiro nivel de avatar*/

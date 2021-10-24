@@ -1,11 +1,13 @@
-* {            /*Seletor universal*/
-  margin: 0;    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
-  --black: hsl(240, 6%, 13%);
-  --gray: hsl(240, 9%, 89%);   /*h = cor, s = saturação, l = luz da cor*/
+  --grey-white: hsl(240, 9%, 89%);
+  --gray: hsl(240, 9%, 89%);
 
   height: 100%;
   font-family: 'Roboto', sans-serif;
@@ -15,50 +17,48 @@ body {
 body {
   display: grid;
   place-items: center;
+  background-color: #121214;
+  background-image: url(images/background-desktop.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 main {
-  background: url(images/background.svg) no-repeat center/cover;    /*Não repete a imagem, centraliza e cobre os espaços em branco*/
-  width: 100vw;    /*view port width -> width do dispositivo*/
-  min-height: 812px;
-  height: 100vh;   /*view port height -> height do dispositivo*/
+  background: url(images/background-mobile.svg);
+  width: 375px;
+  height: 780px;
+
+  background-color: rgba(126, 126, 126, 0.2);
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transform-style: preserve-3d;
+  transform: translateZ(0);
 }
 
 .container {
   max-width: 250px;
   margin-left: auto;
-  margin-right: auto;    /*Mantém o conteúdo equilibrado!*/
+  margin-right: auto;
   text-align: center;
 
   color: var(--gray);
 }
 
-.nlw-logo {
-  display: grid;
-  width: 13rem;
-  top: 2rem;
-  position: absolute;
-  z-index: 1;
-  
-  background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0px 20px 40px 5px rgba(0, 0, 0, 0.5);
-  padding: 1rem;
-  border-radius: 1rem;
-}
-
 .avatar {
-  width: 10rem;   /*rem tem uma relação com o pixel padrão da página. A fonte padrão é 16 pixels.*/
-  margin: 11.5rem auto 0;   /*top, right+left, bottom*/
-  position: relative;   /*ele é o limite para o absolute*/
+  width: 10rem;
+  margin: 11.5rem auto 0; 
+  position: relative;  
 }
 
 .avatar span {
-  position: absolute;   /*Cria-se níveis de empilhamento*/
+  position: absolute;   
   top: -15px;
   z-index: 1;
 }
 
-.avatar > img {    /*Pega a imagem no primeiro nivel de avatar*/
+.avatar > img {    
   width: 10rem;
   height: 11.5rem;
   object-fit: cover;
@@ -91,21 +91,20 @@ p {
 ul {
   margin-top: 3rem;
 
-  list-style: none;   /*retira os pontos dos itens*/
+  list-style: none;
   padding: 0; 
 
-  display: flex;   /*Deixa os elementos lado a lado no eixo x (main)*/
-  /*flex-direction: column;*/
+  display: flex;
   gap: 0.5rem;
 
-  justify-content: center;   /*necessário por conta do uso do flex*/
+  justify-content: center;
 }
 
 .rocketseat-logo {
-  width: 8rem;
+  width: 6rem;
   margin: 2rem auto 0;
   position: relative;
-
+  
   background: rgba(0, 0, 0, 0.6);
   box-shadow: 0px 3px 3px 5px rgba(0, 0, 0, 0.5);
   padding: 1rem;
@@ -114,26 +113,51 @@ ul {
 
 /* Media Querries */
 
-@media (min-width: 720px) {
-	/* estilos versão tablet */
-  
-}
+@media (min-width: 800px) {      /* estilos versão desktop */
+   main {
+    width: 358px;
+    height: 560px;
+    background: url(images/background-card-desktop.png);
+    background-color: #202024;
+    background-size: 358px 560px;
+  }
 
-@media (min-width: 960px) {
-	/* estilos versão desktop */
+  .avatar {
+    margin: 4.7rem auto 0;
+  }
+
+  ul {
+    margin: 1.5rem auto 0;
+  }
+  
+  .rope {
+    position: absolute;
+    z-index: 2;
+    width: 80px;
+    height: 750px;
+    background: linear-gradient(161.24deg, #FF008E -15.25%, #FFCD1E 111.89%);
+    border-radius: 0 0 3px 3px;
+    /* right: vw; */
+    top: 0;
+    margin-top: -45rem;
+    margin-left: 8.9rem;
+    /* margin-left: -40px; */
+  }
+
+  .clasp {
+    position: absolute;
+    background: #121214;
+    z-index: 1;
+    width: 100px;
+    height: 12px;
+    margin-left: 8.3rem;
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .rocketseat-logo {
+    width: 8rem;
+  }
 }
 
 /* Animations */
-
-@keyframes loading {      /*Efeito rotação selo Rocketseat*/
-  0% {
-      transform: rotate(0);
-  }
-  100% {
-      transform: rotate(360deg);
-  }
-}
-
-.spinning {
-  animation: loading 10s linear infinite;
-}

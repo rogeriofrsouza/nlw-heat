@@ -6,7 +6,7 @@ function changeSocialMediaLinks() {
     if (social == 'gmail') {
       li.children[0].href = `mailto:${linksSocialMedia[social]}@${social}.com`
     } else {
-    li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+      li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
     }
   }
 }

@@ -2,15 +2,6 @@
   margin: 0;    
 }
 
-@media (min-width: 720px) {
-	/* estilos versão tablet */
-  
-}
-
-@media (min-width: 960px) {
-	/* estilos versão desktop */
-}
-
 html,
 body {
   --black: hsl(240, 6%, 13%);
@@ -42,6 +33,19 @@ main {
   color: var(--gray);
 }
 
+.nlw-logo {
+  display: grid;
+  width: 13rem;
+  top: 2rem;
+  position: absolute;
+  z-index: 1;
+  
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 20px 40px 5px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
 .avatar {
   width: 10rem;   /*rem tem uma relação com o pixel padrão da página. A fonte padrão é 16 pixels.*/
   margin: 11.5rem auto 0;   /*top, right+left, bottom*/
@@ -52,19 +56,6 @@ main {
   position: absolute;   /*Cria-se níveis de empilhamento*/
   top: -15px;
   z-index: 1;
-}
-
-@keyframes loading {      /*Efeito rotação selo Rocketseat*/
-  0% {
-      transform: rotate(0);
-  }
-  100% {
-      transform: rotate(360deg);
-  }
-}
-
-.spinning {
-  animation: loading 10s linear infinite;
 }
 
 .avatar > img {    /*Pega a imagem no primeiro nivel de avatar*/
@@ -98,7 +89,7 @@ p {
 }
 
 ul {
-  margin-top: 4rem;
+  margin-top: 3rem;
 
   list-style: none;   /*retira os pontos dos itens*/
   padding: 0; 
@@ -108,4 +99,41 @@ ul {
   gap: 0.5rem;
 
   justify-content: center;   /*necessário por conta do uso do flex*/
+}
+
+.rocketseat-logo {
+  width: 8rem;
+  margin: 2rem auto 0;
+  position: relative;
+
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 3px 3px 5px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+/* Media Querries */
+
+@media (min-width: 720px) {
+	/* estilos versão tablet */
+  
+}
+
+@media (min-width: 960px) {
+	/* estilos versão desktop */
+}
+
+/* Animations */
+
+@keyframes loading {      /*Efeito rotação selo Rocketseat*/
+  0% {
+      transform: rotate(0);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.spinning {
+  animation: loading 10s linear infinite;
 }

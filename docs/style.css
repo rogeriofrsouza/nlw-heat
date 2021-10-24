@@ -47,7 +47,7 @@ main {
 }
 
 .avatar {
-  width: 10rem;
+  
   margin: 11.5rem auto 0; 
   position: relative;  
 }
@@ -62,7 +62,6 @@ main {
   width: 10rem;
   height: 11.5rem;
   object-fit: cover;
-
   clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
 }
 
@@ -76,28 +75,28 @@ a {
   text-decoration: none;
 
   margin-top: 0.25rem;
-
+  /*font-size: 1rem;*/
+  
   display: flex;
-  gap: 0.75rem;
-
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 0.75rem;  
 }
 
 p {
   margin-top: 2rem;
+  /*font-size: 0.87rem;*/
 }
 
 ul {
   margin-top: 3rem;
 
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+
   list-style: none;
   padding: 0; 
-
-  display: flex;
-  gap: 0.5rem;
-
-  justify-content: center;
 }
 
 .rocketseat-logo {
@@ -116,7 +115,7 @@ ul {
 @media (min-width: 800px) {      /* estilos versão desktop */
    main {
     width: 358px;
-    height: 560px;
+    height: 580px;
     background: url(images/background-card-desktop.png);
     background-color: #202024;
     background-size: 358px 560px;
@@ -157,6 +156,7 @@ ul {
 
   .rocketseat-logo {
     width: 10rem;
+    margin: 3rem auto 0;
   }
 }
 
@@ -171,6 +171,15 @@ ul {
 	}
 }
 
+#userImage {
+  transition: all ease 1s;
+}
+
+#userImage:hover {
+  width: 11.5rem;
+  height: 13rem;
+}
+
 .social-btn {
   position: relative;
   border-radius: 0.25rem;
@@ -183,7 +192,7 @@ ul {
   top: -8px;
 }
 
-/* Social buttons shadow */
+/* Social media buttons */
 
 .gmail-img:hover {
   box-shadow: 0rem 5px 15px rgba(148, 89, 187, 0.5);
@@ -198,5 +207,19 @@ ul {
 }
 
 .facebook-img:hover {
+  box-shadow: 0rem 5px 15px rgba(148, 89, 187, 0.5);
+}
+
+/* Rocketseat logo */
+
+.rocketseat-logo {
+  position: relative;
+  border-radius: 0.25rem;
+  top: 0;
+  transition: all ease 0.3s;
+}
+.rocketseat-logo:hover {
+  
+  top: -8px;
   box-shadow: 0rem 5px 15px rgba(148, 89, 187, 0.5);
 }

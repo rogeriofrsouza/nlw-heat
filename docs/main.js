@@ -8,11 +8,11 @@ function changeSocialMediaLinks() {
 }
 
 // API Github Profile Infos
-function getGitHubProfileInfos() {
+function getGithubProfileInfos() {
   const url = `https://api.github.com/users/${linksSocialMedia.github}`
 
   fetch(url)
-    .then(response => response.json()) // Apenas 1 ação, não precisa de chaves
+    .then(response => response.json())   // 1 ação na arrow function, sem chaves | Transforma os dados com o método: .json
     .then(data => {
       userName.textContent = data.name.replace(' de Souza', '')
       userBio.textContent = data.bio
@@ -32,4 +32,4 @@ const linksSocialMedia = {
 }
 
 changeSocialMediaLinks()
-getGitHubProfileInfos()
+getGithubProfileInfos()

@@ -4,9 +4,7 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  --grey-white: hsl(240, 9%, 89%);
+html, body {
   --gray: hsl(240, 9%, 89%);
 
   height: 100%;
@@ -101,7 +99,7 @@ ul {
 
 .rocketseat-logo {
   width: 8rem;
-  margin: 2rem auto 0;
+  margin: 1.5rem auto 0;
   position: relative;
   
   background: rgba(0, 0, 0, 0.6);
@@ -112,7 +110,7 @@ ul {
 
 /* Media Querries */
 
-@media (min-width: 800px) {      /* estilos versão desktop */
+@media (min-width: 800px) {      /* Desktop */
    main {
     width: 358px;
     height: 580px;
@@ -162,15 +160,6 @@ ul {
 
 /* Animations */
 
-@keyframes loading {
-	0% {
-		transform: rotate(0);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
-
 #userImage {
   transition: all ease 1s;
 }
@@ -218,8 +207,8 @@ ul {
   top: 0;
   transition: all ease 0.3s;
 }
+
 .rocketseat-logo:hover {
-  
   top: -8px;
   box-shadow: 0rem 5px 15px rgba(148, 89, 187, 0.5);
 }

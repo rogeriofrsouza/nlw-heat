@@ -40,7 +40,7 @@ main {
 .avatar span {
   position: absolute;  /*Cria-se níveis de empilhamento/sobreposição de elementos*/
   top: -15px;
-  z-index: 1;    /*Especifica a ordem de sobreposição, maior valor = encima*/
+  z-index: 1;    /*Especifica a ordem de sobreposição, maior valor = mais encima*/
 }
 
 .avatar > img {    /*Pega a imagem no primeiro nivel do avatar*/

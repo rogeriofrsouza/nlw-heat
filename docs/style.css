@@ -1,10 +1,11 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0;    /*Distância fora da borda de um elemento e outro*/
+  padding: 0;   /*Distância entre o conteúdo de um elemento e suas bordas (vertical e horizontal)*/
+  box-sizing: border-box;    /*Inclue o padding e border na soma total do width e height do elemento*/
 }
 
-html, body {
+html,
+body {         /*O body precisa da sua tag parent em 100%, para se adaptar dinâmicamente*/
   --gray: hsl(240, 9%, 89%);
 
   height: 100%;
@@ -15,6 +16,7 @@ html, body {
 body {
   display: grid;
   place-items: center;
+
   background-color: #121214;
   background-image: url(images/background-desktop.png);
   background-position: center;
@@ -28,11 +30,11 @@ main {
   height: 780px;
 
   background-color: rgba(126, 126, 126, 0.2);
-  backdrop-filter: saturate(180%) blur(10px);
+  backdrop-filter: saturate(180%) blur(10px);        /*Aplica efeito blur na área atrás do elemento*/
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  /*border: 1px solid rgba(255, 255, 255, 0.2);
   transform-style: preserve-3d;
-  transform: translateZ(0);
+  transform: translateZ(0);*/
 }
 
 .container {
@@ -45,7 +47,6 @@ main {
 }
 
 .avatar {
-  
   margin: 11.5rem auto 0; 
   position: relative;  
 }
@@ -60,6 +61,7 @@ main {
   width: 10rem;
   height: 11.5rem;
   object-fit: cover;
+  
   clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
 }
 
@@ -75,9 +77,9 @@ a {
   margin-top: 0.25rem;
   /*font-size: 1rem;*/
   
-  display: flex;
+  display: flex;    /*Alinha os elementos em uma flex box, eixo x (default)*/
   align-items: center;
-  justify-content: center;
+  justify-content: center;   /*Acompanha o display flex*/
   gap: 0.75rem;  
 }
 
@@ -116,7 +118,7 @@ ul {
     height: 580px;
     background: url(images/background-card-desktop.png);
     background-color: #202024;
-    background-size: 358px 580px;
+    background-size: cover;
   }
 
   .avatar {
@@ -153,7 +155,7 @@ ul {
   }
 
   .rocketseat-logo {
-    width: 10rem;
+    width: 9rem;
     margin: 3rem auto 0;
   }
 }
@@ -177,15 +179,14 @@ ul {
 }
 
 #userLink:hover {
-  margin: 3px 5px 0;
-  padding: 10px;
-  box-shadow: 0rem 5px 15px rgba(148, 89, 187, 0.5);
+  border-radius: 0.5rem;
+  padding: 8px;
+  box-shadow: 0px 5px 15px rgba(148, 89, 187, 0.5);
 }
 
 #userLogin:hover {
   color: hsl(0, 0%, 100%);
 }
-
 
 .social-btn {
   position: relative;
@@ -194,26 +195,10 @@ ul {
   top: 0;
   transition: all ease 0.3s;
 }
+
 .social-btn:hover {
   border-radius: 50%;
   top: -8px;
-}
-
-/* Social media buttons */
-
-.gmail-img:hover {
-  box-shadow: 0rem 5px 15px rgba(148, 89, 187, 0.5);
-}
-
-.linkedin-img:hover {
-  box-shadow: 0rem 5px 15px rgba(148, 89, 187, 0.5);
-}
-
-.instagram-img:hover {
-  box-shadow: 0rem 5px 15px rgba(148, 89, 187, 0.5);
-}
-
-.facebook-img:hover {
   box-shadow: 0rem 5px 15px rgba(148, 89, 187, 0.5);
 }
 
@@ -221,9 +206,9 @@ ul {
 
 .rocketseat-logo {
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   top: 0;
-  transition: all ease 0.3s;
+  transition: all ease 0.5s;
 }
 
 .rocketseat-logo:hover {

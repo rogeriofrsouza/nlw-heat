@@ -169,6 +169,24 @@ ul {
   height: 13rem;
 }
 
+#userLink {
+  position: relative;
+  border-radius: 0.25rem;
+  top: 0;
+  transition: all ease 0.7s;
+}
+
+#userLink:hover {
+  margin: 3px 5px 0;
+  padding: 10px;
+  box-shadow: 0rem 5px 15px rgba(148, 89, 187, 0.5);
+}
+
+#userLogin:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+
 .social-btn {
   position: relative;
   border-radius: 0.25rem;

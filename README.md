@@ -1,4 +1,4 @@
-<h1 align="center">:man_astronaut: Mission: Origin :comet:</h1>
+<h1 align="center">:fire: Mission: Origin :stars:</h1>
 
 <p align="center">
   <a href="https://rogeriofrsouza.github.io/nlw-heat/" target="_blank">Page</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -7,7 +7,6 @@
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-license">License</a>
 </p>
-<br>
 
 <p align="center">
   <a href="https://rogeriofrsouza.github.io/nlw-heat/" target="_blank">
@@ -40,8 +39,8 @@ Utilities:
 
 ## 💻 Project
 
-- OriginSix is an institutional page in **Single Page** format and also **Responsive**. Can be used by micro, small and medium-sized enterprises. 
-- Contains the following sections: Header, Navigation, Home, About, Services, Testimonials, Contact and Footer.
+- This is a **Responsive** badge for [Do While 2021](https://dowhile.io/evento) event, made by Rocketseat. 
+- May be used by anyone to show your **GitHub** info and **Social Media** links.
 - You can watch the full course [here](https://app.rocketseat.com.br/node/mission-origin-heat).
 - NLW Heat [tracks](https://app.rocketseat.com.br/nlw-heat/tracks).
 

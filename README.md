@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://rogeriofrsouza.github.io/nlw-heat/" target="_blank">
+  <a href="https://rogeriofrsouza.github.io/nlw-heat-origin/" target="_blank">
     <img alt="nlw Heat" src="docs/images/preview.png" width="100%">
   </a>
 </p>

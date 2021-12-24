@@ -1,13 +1,20 @@
+/* ========== RESET ====================*/
 * {
   margin: 0;    /*Distância fora da borda de um elemento e outro*/
   padding: 0;   /*Distância entre o conteúdo de um elemento e suas bordas (vertical e horizontal)*/
   box-sizing: border-box;    /*Inclue o padding e border na soma total do width e height do elemento*/
 }
 
-html,
-body {         /*O body precisa da sua tag parent em 100%, para se adaptar dinâmicamente*/
-  --gray: hsl(240, 9%, 89%);
 
+/* ========== BASE ====================*/
+:root {
+  font-size: 100%;    /*1 rem */
+  --gray: hsl(240, 9%, 89%);
+  --gray-light: hsla(240, 9%, 89%, 0.2);
+}
+
+html,
+body {       /*O body precisa da sua tag parent em 100%, para se adaptar dinâmicamente*/
   height: 100%;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -32,20 +39,27 @@ main {
   background-color: rgba(126, 126, 126, 0.2);
   backdrop-filter: saturate(180%) blur(10px);        /*Aplica efeito blur na área atrás do elemento*/
   -webkit-backdrop-filter: blur(10px);
-  /*border: 1px solid rgba(255, 255, 255, 0.2);
+
+  /*
+  border: 1px solid rgba(255, 255, 255, 0.2);
   transform-style: preserve-3d;
-  transform: translateZ(0);*/
+  transform: translateZ(0);
+  */
 }
 
+
+/* ========== LAYOUT ====================*/
 .container {
   max-width: 250px;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
 
+  text-align: center;
   color: var(--gray);
 }
 
+
+/* ========== AVATAR ====================*/
 .avatar {
   margin: 11.5rem auto 0; 
   position: relative;  
@@ -60,11 +74,13 @@ main {
 .avatar > img {    
   width: 10rem;
   height: 11.5rem;
+
   object-fit: cover;
-  
   clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
 }
 
+
+/* ========== USER INFO ====================*/
 h1 {
   font-size: 1.5rem;
   margin-top: 1.5rem;
@@ -73,9 +89,7 @@ h1 {
 a {
   color: var(--gray);
   text-decoration: none;
-
   margin-top: 0.25rem;
-  /*font-size: 1rem;*/
   
   display: flex;    /*Alinha os elementos em uma flex box, eixo x (default)*/
   align-items: center;
@@ -89,33 +103,37 @@ p {
 }
 
 ul {
+  list-style: none;
+  padding: 0;
   margin-top: 3rem;
 
   display: flex;
   justify-content: center;
-  gap: 0.7rem;
-
-  list-style: none;
-  padding: 0; 
+  gap: 0.75rem; 
 }
 
+
+/* ========== ROCKETSEAT LOGO ==================== */
 .rocketseat-logo {
-  width: 8rem;
-  margin: 1.5rem auto 0;
-  position: relative;
+  font-size: 1.5rem;
+  width: 8.5rem;
+  margin: 3rem auto 0;
   
   background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0px 3px 3px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 3px 3px 5px rgba(17, 16, 16, 0.712);
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 0.25rem;
 }
 
-/* Media Querries */
 
-@media (min-width: 800px) {      /* Desktop */
-   main {
-    width: 358px;
-    height: 580px;
+/* ========== MEDIA QUERRIES ==================== */
+
+/* Desktops */
+@media (min-width: 800px) {
+  main {
+    width: 360px;
+    height: 600px;
+    
     background: url(images/background-card-desktop.png);
     background-color: #202024;
     background-size: cover;
@@ -126,7 +144,7 @@ ul {
   }
 
   ul {
-    margin: 1.5rem auto 0;
+    margin: 2rem auto 0;
   }
   
   .rope {
@@ -134,84 +152,69 @@ ul {
     z-index: 2;
     width: 80px;
     height: 750px;
+
     background: linear-gradient(161.24deg, #FF008E -15.25%, #FFCD1E 111.89%);
     border-radius: 0 0 3px 3px;
-    /* right: vw; */
     top: 0;
     margin-top: -45rem;
     margin-left: 8.9rem;
-    /* margin-left: -40px; */
   }
 
   .clasp {
     position: absolute;
-    background: #121214;
     z-index: 1;
     width: 100px;
     height: 12px;
+
+    background: #121214;
+    border-radius: 1.5rem;
     margin-left: 8.3rem;
     margin-top: 1.5rem;
-    border-radius: 1.5rem;
   }
 
   .rocketseat-logo {
-    width: 9rem;
-    margin: 3rem auto 0;
+    margin: 2rem auto 0;
+    width: 8rem;
   }
-}
 
-/* Animations */
+  /* ===== ANIMATIONS ========== */
+  #userImage {
+    transition: all ease 1s;
+  }
+  
+  #userImage:hover {
+    width: 11.5rem;
+    height: 13rem;
+  }
 
-#userImage {
-  transition: all ease 1s;
-}
+  #userLink:hover {
+    color: white;
+  }
 
-#userImage:hover {
-  width: 11.5rem;
-  height: 13rem;
-}
+  .social-btn {
+    position: relative;
+    border-radius: 0.25rem;
+    width: 50px;
+    top: 0;
+    transition: all ease 0.3s;
+  }
+  
+  .social-btn:hover {
+    border-radius: 50%;
+    top: -8px;
+    box-shadow: 0rem 5px 15px rgba(148, 89, 187, 0.5);
+  }
 
-#userLink {
-  position: relative;
-  border-radius: 0.25rem;
-  top: 0;
-  transition: all ease 0.7s;
-}
-
-#userLink:hover {
-  border-radius: 0.5rem;
-  padding: 8px;
-  box-shadow: 0px 5px 15px rgba(148, 89, 187, 0.5);
-}
-
-#userLogin:hover {
-  color: hsl(0, 0%, 100%);
-}
-
-.social-btn {
-  position: relative;
-  border-radius: 0.25rem;
-  width: 50px;
-  top: 0;
-  transition: all ease 0.3s;
-}
-
-.social-btn:hover {
-  border-radius: 50%;
-  top: -8px;
-  box-shadow: 0rem 5px 15px rgba(148, 89, 187, 0.5);
-}
-
-/* Rocketseat logo */
-
-.rocketseat-logo {
-  position: relative;
-  border-radius: 0.5rem;
-  top: 0;
-  transition: all ease 0.5s;
-}
-
-.rocketseat-logo:hover {
-  top: -8px;
-  box-shadow: 0rem 5px 15px rgba(148, 89, 187, 0.5);
+  .rocketseat-logo {
+    position: relative;
+    border-radius: 0.5rem;
+    top: 0;
+    transition: all ease 0.3s;
+  }
+  
+  .rocketseat-logo:hover {
+    top: -8px;
+    box-shadow: 0rem 5px 15px rgba(148, 89, 187, 0.5);
+    color: white;
+  }
 }

@@ -132,7 +132,7 @@ ul {
 @media (min-width: 800px) {
   main {
     width: 360px;
-    height: 600px;
+    height: 580px;
     
     background: url(images/background-card-desktop.png);
     background-color: #202024;
@@ -151,12 +151,12 @@ ul {
     position: absolute;
     z-index: 2;
     width: 80px;
-    height: 750px;
+    height: 185px;
 
     background: linear-gradient(161.24deg, #FF008E -15.25%, #FFCD1E 111.89%);
     border-radius: 0 0 3px 3px;
     top: 0;
-    margin-top: -45rem;
+    margin-top: -9.8rem;
     margin-left: 8.9rem;
   }
 
@@ -207,14 +207,14 @@ ul {
 
   .rocketseat-logo {
     position: relative;
-    border-radius: 0.5rem;
-    top: 0;
+    border-radius: 0.25rem;
+    top: -0.5rem;
     transition: all ease 0.3s;
   }
   
   .rocketseat-logo:hover {
-    border-radius: 0rem;
-    top: -8px;
+    border-radius: 0.5rem;
+    top: -16px;
     box-shadow: 0px 5px 15px rgba(148, 89, 187, 0.5);
     color: white;
   }

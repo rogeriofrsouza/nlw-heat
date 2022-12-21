@@ -1,7 +1,7 @@
 <h1 align="center">:fire: Mission: Origin :stars:</h1>
 
 <p align="center">
-  <a href="https://rogeriofrsouza.github.io/nlw-heat-origin/" target="_blank">Page</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://rogeriofrsouza.github.io/nlw-heat/" target="_blank">Page</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-tech-stack">Tech Stack</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://rogeriofrsouza.github.io/nlw-heat-origin/" target="_blank">
+  <a href="https://rogeriofrsouza.github.io/nlw-heat/" target="_blank">
     <img alt="nlw Heat" src="docs/images/preview.png" width="100%">
   </a>
 </p>
